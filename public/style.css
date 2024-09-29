@@ -43,6 +43,8 @@
 
 
 body{
+    /* display: flex; */
+    /* flex-direction: column; */
     overflow-x: hidden;
     font-family: 'Inter Regular';
     color: #161616;
@@ -68,8 +70,8 @@ nav{
     -webkit-box-shadow: 0 8px 10px -6px #000000;
     -moz-box-shadow: 0 8px 10px -6px #000000;
     box-shadow: 0px 10px 10px -6px rgba(0, 0, 0, 0.3);
-    /* position:sticky;
-    top:0; */
+    position:sticky;
+    top:0;
 }
 nav article{
     /* border: solid red; */
@@ -117,6 +119,8 @@ header{
     flex-direction: column; 
     /* border: solid red; */
     /* background-color: black; */
+    padding-bottom: 10%;
+    
 }    
 header video{
     height: 100%;
@@ -188,4 +192,51 @@ header .hero-text h3{
 
 .header-button:focus {
   box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+}
+
+/* Main ------- */
+
+.main-home{
+    background-color: white;
+    margin: 2em 0;
+    padding: 1% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* color: white; */
+}
+
+.main-home h2{
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 2%;
+}
+
+.main-home section{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.main-home article{
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    border: 1px solid grey;
+}
+.main-home article img{
+    height: 200px;
+    width: 200px;
+    border-radius: 4%;
+}
+.main-home article p{
+    width: 65%;
+    /* border: solid red; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-home button{
+    margin-top: 4em;
 }
