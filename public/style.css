@@ -199,7 +199,8 @@ header .hero-text h3{
 .main-home{
     background-color: white;
     margin: 2em 0;
-    padding: 1% 0;
+    padding-top: 1%;
+    padding-bottom: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -239,4 +240,43 @@ header .hero-text h3{
 
 .main-home button{
     margin-top: 4em;
+}
+
+/* Aside home --------------- */
+
+.aside-home{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.aside-home section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.aside-home section article{
+    /* border: 0.1px solid grey; */
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    width: 18%;
+    text-align: center;
+    /* display: flex;
+    flex-direction: column; */
+    /* justify-content: center	; */
+    /* margin: 0 2em; */
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.aside-home h3{
+    font-size: 36px;
+    /* border: solid green; */
+    margin: 20px;
+    /* margin-bottom: 0; */
+
+}
+.aside-home p{
+    /* border: solid red; */
+    font-size: 16px;
+    margin-bottom: 20px;
 }
