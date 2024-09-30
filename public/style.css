@@ -157,7 +157,7 @@ header .hero-text h3{
 
 
 /* CSS */
-.header-button {
+.button-home {
   appearance: button;
   backface-visibility: hidden;
   background-color: #405cf5;
@@ -186,11 +186,11 @@ header .hero-text h3{
   /* width: 100%; */
 }
 
-.header-button:disabled {
+.button-home:disabled {
   cursor: default;
 }
 
-.header-button:focus {
+.button-home:focus {
   box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
 }
 
@@ -279,4 +279,88 @@ header .hero-text h3{
     /* border: solid red; */
     font-size: 16px;
     margin-bottom: 20px;
+}
+
+/* Section -------------- */
+
+.section-home{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-home .avis-titre-home{
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-home .avis-titre-home h3{
+    font-size: 20px;
+}
+.section-home .avis-titre-home h2{
+    background-color: #202020;
+    color: white;
+    padding: 10px 20px;
+    font-weight: 600;
+    /* width: 100%; */
+}
+
+.reviews-home{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 3%;
+}
+.reviews-box-home{
+    width: 550px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+    background-color: white;
+    padding: 20px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.reviews-box-home img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    /* border: solid black; */
+}
+.reviews-box-home:hover{
+    transform: translateY(-10px);
+    transition: all ease 0.3s;
+}
+.reviews-top-box{
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap;  */
+    /* align-items: flex-start; */
+}
+
+.reviews-top-box .name-username{
+    /* border: solid black; */
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    height: 100%;
+    margin-left: 5px;
+}
+.reviews-top-box h3{
+    /* border: solid red; */
+    margin: 0;
+}
+.reviews-top-box p{
+    margin-top: 10px;
+}
+
+.fa-star{
+    color: #f9d71c;
+}
+
+.section-home button{
+    margin-top: 4em;
 }
