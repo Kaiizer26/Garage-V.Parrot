@@ -305,6 +305,7 @@ header .hero-text h3{
 }
 .section-home .avis-titre-home h2{
     background-color: #202020;
+    border-radius: 11px;
     color: white;
     padding: 10px 20px;
     font-weight: 600;
