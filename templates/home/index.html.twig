@@ -38,7 +38,7 @@
 
             <div class="hero-text"> 
                 <h2>Garage V. Parrot</h2>
-                <h3>Votre naviguateur ne supporte pas la vidéo.Votre naviguateur ne supporte pas la vidéo.Votre naviguateur ne supporte pas la vidéo.Votre naviguateur ne supporte pas la vidéo.</h3>
+                <h3>Votre partenaire de confiance pour tous vos besoins automobiles. Grâce à notre expertise et nos services complets, nous garantissons votre satisfaction et le bon fonctionnement de votre véhicule.</h3>
                 
             </div>
             <button class="button-home"><a href="">fesfs</a></button>
@@ -171,11 +171,37 @@
                         </div>
                     </article>
                     <article class="reviews-bottom-box">
-                        <p>Commentaire blabla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, distinctio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi modi, eos ipsam expedita quos rem assumenda commodi quam qui quia mollitia est, dignissimos impedit laboriosam, molestiae voluptatum deserunt animi dolore.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi et odio sit veritatis dicta quo alias numquam quae soluta? Nemo ut obcaecati officiis, provident sapiente nisi perspiciatis molestias in omnis aspernatur, ducimus labore facilis esse. Ullam expedita reiciendis itaque repellendus.</p>
                     </article>
                 </section>
+                {# Avis automatisé test #}
+                 {% for review in reviews %}
+                <section class="reviews-box-home">
+                    <article class="reviews-top-box">
+                        <img src="{{ review.image }}" alt="Image de l'avis" class="modify">  <!-- Image -->
+                        <div class="name-username">
+                            <h3 class="modify">{{ review.name }}</h3> <!-- Nom de l'auteur -->
+                            <p class="modify">@{{ review.username }}</p> <!-- Pseudo de l'auteur -->
+                        </div>
+                        <div class="stars-review modify">
+                            {% for i in 1..5 %}
+                                {% if i <= review.stars %}
+                                    <i class="fas fa-star"></i> <!-- Étoile pleine -->
+                                {% else %}
+                                    <i class="far fa-star"></i> <!-- Étoile vide -->
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+
+                    </article>
+                    <article class="reviews-bottom-box">
+                        <p class="modify">{{ review.comment }}</p> <!-- Le commentaire -->
+                    </article>
+                </section>
+                {% endfor %}
+
             </article>
-            <button class="button-home">Rédiger un avis</button>
+            {# <button class="button-home"><a href="{{ path('app_review_show', {'id': review.id}) }}">Rédiger un avis</a></button> #}
         </section>
 
         <footer id="footer">
