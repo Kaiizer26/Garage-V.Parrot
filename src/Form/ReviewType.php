@@ -18,6 +18,7 @@ class ReviewType extends AbstractType
             ->add('stars')
             ->add('comment')
         ;
+
     }
 
     public function configureOptions(OptionsResolver $resolver): void

@@ -1,11 +1,15 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}New Review{% endblock %}
-
+    
 {% block body %}
-    <h1>Create new Review</h1>
+    <section class="write-box">
+        <article class="write-review">
+            <h1>Create new Review</h1>
 
-    {{ include('review/_form.html.twig') }}
+            {{ include('review/_form.html.twig') }}
 
-    <a href="{{ path('app_review_index') }}">back to list</a>
+            <a href="{{ path('app_review_index') }}">back to list</a>
+        </article>
+    </section>
 {% endblock %}

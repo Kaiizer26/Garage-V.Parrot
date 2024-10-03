@@ -414,3 +414,39 @@ footer h3{
 .iframe-footer{
     /* border: 3px solid white; */
 }
+
+
+/* Page nouvel avis  */
+
+/* .reviews-box-home{
+    width: 550px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+    background-color: white;
+    padding: 20px;
+    margin: 15px;
+    cursor: pointer;
+} */
+
+.base-twig{
+    background-image: url("images/lines-2.png");
+}
+
+.write-review{
+    width: 35%;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+    background-color: white;
+    padding: 20px;
+    margin: 15px;
+    cursor: pointer;
+    /* display: flex; */
+}
+
+.write-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+.p{
+    border: red;
+}
