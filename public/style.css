@@ -674,8 +674,15 @@ footer h3{
 
 /* Page modèle voitures */
 
+.models{
+    display: flex;
+    
+}
 .car-listing{
-    border: solid red;
+    /* display: flex; */
+    /* flex-direction: column; */
+    width: 25%;
+    margin: 1em;
     font-family: 'Inter Light' ;
     background-color: #fff;
     padding: 20px;
@@ -683,17 +690,18 @@ footer h3{
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 500px;
+    width: 30%;
     line-height: 0.5em;
   
   }
   .car-listing img{
     height: 350px;
-    width: 500px;
+    width: 100%;
   }
   .car-listing article{
     display: flex;
     flex-direction: column;
+    
   }
   
   .ligne1-car{

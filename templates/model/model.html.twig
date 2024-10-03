@@ -16,7 +16,7 @@
                 <a href="#footer"><h3>Nous contacter</h3></a>
             </article>
             <article class="logo">
-                <a href="">
+                <a href="{{ path('home') }}">
                     <img id="logo" src="images/vparrot.png" alt="logo">
                 </a>
             </article>
@@ -36,31 +36,32 @@
                     </a>
                 {% endif %}
             </article>
-        </nav>        
-        
-        <div class="car-listing">
+        </nav>    
+        <section class="models">    
             {% for model in models %}
-            <img src="/images/maserati1.webp" alt="Nissan Qashqai">
-            <article>
-                <div class="ligne1-car">
-                    <h2>{{ model.Nom }}</h2>  <!-- Correction ici -->
-                    <p>Prix : 17 990 €</p>
-                </div>
-                <div class="ligne2-car">
-                    <p>Modèle : 1.3 DIG-T N-Connecta</p>
-                    <p>Mensualité : 256 €</p>
-                </div>
-                <div class="description-car">
-                    <p>Kilométrage : 30 062 km</p>
-                    <p>Carburant : Essence</p>
-                    <p>Boîte de vitesses : Manuelle</p>
-                    <p>Année : 2019</p>
-                </div>
+            <div class="car-listing">
+                <img src="/images/maserati1.webp" alt="Nissan Qashqai">
+                <article>
+                    <div class="ligne1-car">
+                        <h2>{{ model.Nom }}</h2>  <!-- Correction ici -->
+                        <p>{{ model.prix }} €</p>
+                    </div>
+                    <div class="ligne2-car">
+                        <p>{{model.km}} km | {{ model.carburant }} | {{ model.boite }} | {{ model.annee }}</p>
+                        <p>{{ model.mensualite }}€/mois</p>
+                    </div>
+                    {# <div class="description-car">
+                        <p>{{model.km}} km</p>
+                        <p>{{ model.carburant }}</p>
+                        <p>{{ model.boite }}</p>
+                        <p>{{ model.annee }}</p>
+                    </div> #}
 
-                <button>Voir cette voiture</button>
-            </article>
+                    <button>Voir cette voiture</button>
+                </article>
+            </div>
             {% endfor %}
-        </div>
+        </section>
         
 
 
