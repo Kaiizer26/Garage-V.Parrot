@@ -675,6 +675,7 @@ footer h3{
 /* Page modèle voitures */
 
 .car-listing{
+    border: solid red;
     font-family: 'Inter Light' ;
     background-color: #fff;
     padding: 20px;

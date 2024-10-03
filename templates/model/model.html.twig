@@ -7,7 +7,7 @@
     <link rel="icon" href="images/vparrot.png">
     <script src="https://unpkg.com/alpinejs" defer></script>
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
-
+    {% block body %}
     <body>
          <nav>
             <article class="nav-text">
@@ -37,11 +37,13 @@
                 {% endif %}
             </article>
         </nav>        
+        
         <div class="car-listing">
+            {% for model in models %}
             <img src="/images/maserati1.webp" alt="Nissan Qashqai">
             <article>
                 <div class="ligne1-car">
-                    <h2>Nissan Qashqai</h2>
+                    <h2>{{ model.Nom }}</h2>  <!-- Correction ici -->
                     <p>Prix : 17 990 €</p>
                 </div>
                 <div class="ligne2-car">
@@ -56,9 +58,41 @@
                 </div>
 
                 <button>Voir cette voiture</button>
-            </div>
-        </article>
+            </article>
+            {% endfor %}
+        </div>
+        
+
+
 
 
     </body>
+    {% endblock %}
 </html>
+        {# <div class="car-listing">
+            <img src="/images/maserati1.webp" alt="Nissan Qashqai">
+            <article>
+                <div class="ligne1-car">
+                    <h2>Nom</h2>  <!-- Correction ici -->
+                    <p>Prix : 17 990 €</p>
+                </div>
+                <div class="ligne2-car">
+                    <p>Modèle : 1.3 DIG-T N-Connecta</p>
+                    <p>Mensualité : 256 €</p>
+                </div>
+                <div class="description-car">
+                    <p>Kilométrage : 30 062 km</p>
+                    <p>Carburant : Essence</p>
+                    <p>Boîte de vitesses : Manuelle</p>
+                    <p>Année : 2019</p>
+                </div>
+
+                <button>Voir cette voiture</button>
+            </article>
+        </div>
+       
+            
+
+
+    </body>
+</html> #}
