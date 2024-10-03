@@ -1,0 +1,64 @@
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Garage V.Parrot</title>
+    <link rel="stylesheet" href="{{ asset('style.css') }}">
+    <link rel="icon" href="images/vparrot.png">
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+
+    <body>
+         <nav>
+            <article class="nav-text">
+                <a href=""><h3>Modèles</h3></a>
+                <a href="#avis"><h3>Avis</h3></a>
+                <a href="#footer"><h3>Nous contacter</h3></a>
+            </article>
+            <article class="logo">
+                <a href="">
+                    <img id="logo" src="images/vparrot.png" alt="logo">
+                </a>
+            </article>
+            <article>
+                <a href="#footer">
+                    <img src="images/localisation.svg" alt="localisation">
+                </a>    
+                {% if not is_granted('ROLE_ADMIN') %}
+                    <a href="{{ path('app_login') }}">
+                        <img src="images/seconnecter.svg" alt="connexion">
+                    </a>
+                {% endif %}
+
+                {% if app.user and is_granted('ROLE_ADMIN') %}
+                    <a href="{{ path('admin') }}">
+                        <img src="images/seconnecter.svg" alt="connexion">
+                    </a>
+                {% endif %}
+            </article>
+        </nav>        
+        <div class="car-listing">
+            <img src="/images/maserati1.webp" alt="Nissan Qashqai">
+            <article>
+                <div class="ligne1-car">
+                    <h2>Nissan Qashqai</h2>
+                    <p>Prix : 17 990 €</p>
+                </div>
+                <div class="ligne2-car">
+                    <p>Modèle : 1.3 DIG-T N-Connecta</p>
+                    <p>Mensualité : 256 €</p>
+                </div>
+                <div class="description-car">
+                    <p>Kilométrage : 30 062 km</p>
+                    <p>Carburant : Essence</p>
+                    <p>Boîte de vitesses : Manuelle</p>
+                    <p>Année : 2019</p>
+                </div>
+
+                <button>Voir cette voiture</button>
+            </div>
+        </article>
+
+
+    </body>
+</html>

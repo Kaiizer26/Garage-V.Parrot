@@ -1,11 +1,93 @@
-{# {% extends 'base.html.twig' %} #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+
+    {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    
+    <div class="wrapper">
+        {# {% if app.user %}
+        <div class="mb-3">
+            You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+        </div>
+        
+        {% endif %} #}
+        <h1 class="h3 mb-3 font-weight-normal title">Se connecter</h1>
+        <form method="post">
+            <div class="field">
+                {# <label for="inputEmail">Email</label> #}
+                <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus placeholder="Email">
+            </div>
+            <div class="field"> 
+            {# <label for="inputPassword">Password</label> #}
+            <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required placeholder="Password">
+            </div>
+            <input type="hidden" name="_csrf_token"
+                value="{{ csrf_token('authenticate') }}"
+            >
+            <div class="content">
+                <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox" name="_remember_me"> Se souvenir de moi
+                    </label>
+                </div>
+            </div>
+
+            <button class="button-home btn-login btn-lg btn-primary" type="submit">
+            Se connecter
+            </button>
+        </form>
+    </div>
+{% endblock %}
+
+
+{# <body class="background-login">
+         <aside>
+            <div class="wrapper">
+               <div class="title">Login</div>
+               <form action="#">
+                  <div class="field">
+                     <input type="email" id="mail" name="fmail" maxlength="50" minlength="1" required>
+                     <label>Email Address</label>
+                  </div>
+                  <div class="field">
+                     <input type="password" id="password" name="fpassword" maxlength="50" minlength="1" required>
+                     <label>Password</label>
+                  </div>
+                  <div class="content">
+                    <div class="checkbox">
+                      <input type="checkbox" id="remember-me">
+                      <label for="remember-me">Remember me</label>
+                    </div>
+                    <div class="pass-link">
+                      <a href="#">Forgot password?</a>
+                    </div>
+                  </div>
+                  <div class="field">
+                     <input type="submit" value="Login" id="nini">
+                  </div>
+                  <div class="signup-link">
+                     Not a member? <a href="#">Signup now</a>
+                  </div>
+               </form>
+            </div>
+         </aside>
+    </body> #}
+
+
+{# 
+    {% extends 'base.html.twig' %}
 
 {% block title %}Log in!{% endblock %}
 
 {% block body %}
 <form method="post">
     {% if error %}
-        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        <div class="wrapper alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
 
     {% if app.user %}
@@ -34,4 +116,5 @@
         Sign in
     </button>
 </form>
-{% endblock %}
+{% endblock %} #}
+

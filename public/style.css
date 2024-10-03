@@ -50,6 +50,7 @@ body{
     overflow-x: hidden;
     font-family: 'Inter Regular';
     color: #161616;
+    background-color: #fafafa;
     width: 100%;
     height: 100%;
     /* background-image: url(images/ciel.webp); */
@@ -122,6 +123,7 @@ header{
     /* border: solid red; */
     /* background-color: black; */
     padding-bottom: 10%;
+    /* margin-top: 10%; */
     
 }    
 header video{
@@ -154,7 +156,8 @@ header .hero-text h3{
     height: 100%;
     text-wrap: wrap;
     text-align: center;
-    padding-bottom: 2em;
+    /* padding-bottom: 2em; */
+    /* padding-bottom: 10%; */
 }
 
 
@@ -197,9 +200,13 @@ header .hero-text h3{
 }
 
 /* Main ------- */
-
+main{
+    /* background-image: url(images/gradient-blue.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
 .main-home{
-    background-color: white;
+    background-color: #fafafa;
     margin: 2em 0;
     padding-top: 1%;
     padding-bottom: 5%;
@@ -221,6 +228,7 @@ header .hero-text h3{
     justify-content: space-evenly;
 }
 .main-home article{
+    background-color: white;
     display: flex;
     width: 30%;
     flex-direction: column;
@@ -247,6 +255,10 @@ header .hero-text h3{
 /* Aside home --------------- */
 
 .aside-home{
+    /* background-image: url(images/gradient-blue.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; */
+    
     padding-top: 2%;
     padding-bottom: 2%;
 }
@@ -286,6 +298,9 @@ header .hero-text h3{
 /* Section -------------- */
 
 .section-home{
+    background-image: url(images/lines.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     padding-top: 2%;
     padding-bottom: 5%;
     display: flex;
@@ -450,3 +465,261 @@ footer h3{
 .p{
     border: red;
 }
+
+/* Page créer review */
+
+.h1-new-review{
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.form-control{
+    /* display: flex; */
+    /* justify-content: space-around;
+    align-items: flex-end; */
+    /* flex-direction: row; */
+    /* border: solid red; */
+    /* flex-wrap: nowrap; */
+    margin-left: 1em;
+    /* width: 25%; */
+
+}
+
+.btn-review{
+    text-align: center;
+    /* display: flex; */
+    /* justify-content: center; */
+}
+
+#review{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: solid red; */
+}
+
+#review div{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    height: 100%;
+}
+
+#review #review_image{
+    margin: 1em 0 0 4em ;
+
+}
+.required{
+    margin-top: 1em;
+    /* border: solid red; */
+}
+
+/* Page Index Review */
+
+.table a{
+    color: black;
+}
+
+.btn-index-review{
+    float: left;
+    margin-left: 1em;
+    margin-top: 3em;
+}
+
+/* Page Login */
+
+.background-login{
+    background-image: url(images/ciel.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .wrapper{
+      width: 380px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+      z-index: 100;
+      margin-left: 550px;
+      margin-top: 100px;   
+    }
+    .wrapper .title{
+      font-size: 35px;
+      font-weight: 600;
+      text-align: center;
+      line-height: 100px;
+      color: #fff;
+      user-select: none;
+      border-radius: 15px 15px 0 0;
+      background: #4158d0;
+    }
+    .wrapper form{
+      padding: 10px 30px 50px 30px;
+    }
+    .wrapper form .field{
+      height: 50px;
+      width: 100%;
+      margin-top: 20px;
+      position: relative;
+    }
+  
+    
+    .wrapper form .field input{
+      height: 100%;
+      width: 85%;
+      outline: none;
+      font-size: 17px;
+      padding-left: 20px;
+      border: 1px solid lightgrey;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+    }
+    .wrapper form .field input:focus,
+    form .field input:valid{
+      border-color: #4158d0;
+    }
+    .wrapper form .field label{
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      color: #999999;
+      font-weight: 400;
+      font-size: 17px;
+      pointer-events: none;
+      transform: translateY(-50%);
+      transition: all 0.3s ease;
+    }
+    form .field input:focus ~ label,
+    form .field input:valid ~ label{
+      top: 0%;
+      font-size: 16px;
+      color: #4158d0;
+      background: #fff;
+      transform: translateY(-50%);
+    }
+    form .content{
+      display: flex;
+      width: 100%;
+      height: 50px;
+      font-size: 16px;
+      align-items: center;
+      justify-content: space-around;
+    }
+    form .content .checkbox{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    form .content input{
+      width: 15px;
+      height: 15px;
+      
+    }
+    form .content label{
+      color: #262626;
+      user-select: none;
+      padding-left: 5px;
+    }
+  
+    form .field input[type="submit"]{
+      color: #fff;
+      border: none;
+      padding-left: 0;
+      margin-top: -10px;
+      font-size: 20px;
+      font-weight: 500;
+      cursor: pointer;
+      background: #4158d0;
+      transition: all 0.3s ease;
+    }
+  
+    form .field #nini:hover{
+      background: #1d2b73;
+    }
+    
+  
+    form .field input[type="submit"]:active{
+      transform: scale(0.95);
+      
+    }
+  
+    form .signup-link{
+      color: #262626;
+      margin-top: 20px;
+      text-align: center;
+  
+    }
+    form .pass-link a,
+    form .signup-link a{
+      color: #4158d0;
+      text-decoration: none;
+    }
+    form .pass-link a:hover,
+    form .signup-link a:hover{
+      text-decoration: underline;
+      
+    }
+
+    .wrapper form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* align-items: center; */
+    }
+  
+    .content{
+        margin-top: 1em;
+    }
+    
+
+/* Page modèle voitures */
+
+.car-listing{
+    font-family: 'Inter Light' ;
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    line-height: 0.5em;
+  
+  }
+  .car-listing img{
+    height: 350px;
+    width: 500px;
+  }
+  .car-listing article{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .ligne1-car{
+    font-family: 'Inter Regular';
+    font-size: 20px;
+    font-weight: 900;
+    /* color:#405cf5; */
+    display: flex;
+    justify-content: space-between;
+  }
+  .ligne2-car{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .description-car{
+    margin-top: 10px;
+  }
+  .car-listing button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .car-listing button:hover {
+    background-color: #3e8e41;
+  }

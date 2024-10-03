@@ -23,12 +23,20 @@
                 </a>
             </article>
             <article>
-                <a href="">
+                <a href="#footer">
                     <img src="images/localisation.svg" alt="localisation">
                 </a>    
-                <a href="">
-                    <img src="images/seconnecter.svg" alt="connexion">
-                </a>
+                {% if not is_granted('ROLE_ADMIN') %}
+                    <a href="{{ path('app_login') }}">
+                        <img src="images/seconnecter.svg" alt="connexion">
+                    </a>
+                {% endif %}
+
+                {% if app.user and is_granted('ROLE_ADMIN') %}
+                    <a href="{{ path('admin') }}">
+                        <img src="images/seconnecter.svg" alt="connexion">
+                    </a>
+                {% endif %}
             </article>
         </nav>        
         <header> 
@@ -45,7 +53,7 @@
         </header>
         <main class="main-home">
             <h2>Nos services</h2>
-            <section>
+            <section class="background-main">
                 <article>
                     <img id="réparation" src="images/Speed-1--Streamline-Brooklyn.png"></img>
                     <h3>Réparation / Entretien</h3>
@@ -210,7 +218,7 @@
                 <article>
                     <img src="images/position1.png" alt="logo localisation">
                     <div class="addresse-footer">
-                        <p>15 rue de l'ascendant</p>
+                        <p>3 rue de l'ascendant</p>
                         <p>94358 Listenbourg</p>
                         <p id="localisation-footer">Afficher la carte</p>
                     </div>
