@@ -65,8 +65,11 @@
         
 
 
-
-
+    {% if app.user and is_granted('ROLE_ADMIN') %}
+    <section class="setion-btn-model">
+        <button class="button-home btn-model"><a href="{{ path('app_models_new') }}">Vendre une voiture</a></button>
+    </section>
+    {% endif %}
     </body>
     {% endblock %}
 </html>

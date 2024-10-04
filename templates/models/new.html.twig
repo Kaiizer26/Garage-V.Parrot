@@ -3,9 +3,13 @@
 {% block title %}New Models{% endblock %}
 
 {% block body %}
-    <h1>Create new Models</h1>
+    <section class="write-box">
+        <article class="write-review">
+    <h1>Ajouter une voiture</h1>
 
     {{ include('models/_form.html.twig') }}
 
     <a href="{{ path('app_models_index') }}">back to list</a>
+        </article>
+    </section>
 {% endblock %}

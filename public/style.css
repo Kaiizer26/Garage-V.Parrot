@@ -453,7 +453,9 @@ footer h3{
     padding: 20px;
     margin: 15px;
     cursor: pointer;
-    /* display: flex; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .write-box{
@@ -676,6 +678,7 @@ footer h3{
 
 .models{
     display: flex;
+    flex-wrap: wrap;
     
 }
 .car-listing{
@@ -690,7 +693,7 @@ footer h3{
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 30%;
+    width: 29%;
     line-height: 0.5em;
   
   }
@@ -731,4 +734,27 @@ footer h3{
   
   .car-listing button:hover {
     background-color: #3e8e41;
+  }
+
+  body.chakra-ui-light{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-btn-model{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    /* width: 50%; */
+  }
+
+  #models{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: solid red; */
+  }
+  #models div{
+    margin-top: 5px;
   }
