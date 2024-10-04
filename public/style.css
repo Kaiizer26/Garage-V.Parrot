@@ -745,10 +745,13 @@ footer h3{
     display: flex;
     justify-content: center;
     flex-direction: row;
+    /* border: solid red; */
     align-items: center;
-    /* width: 50%; */
+    width: 50%;
   }
-
+.btn-model{
+    margin-bottom: 2em;
+}
   #models{
     display: flex;
     flex-direction: column;
